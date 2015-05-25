@@ -1,0 +1,6 @@
+def number_shuffle(number)
+  comb = number.to_s.size == 3?6:24
+  shuffle = []
+  shuffle << number.to_s.split(//).shuffle.join.to_i while shuffle.uniq.size != comb
+  shuffle.uniq.sort
+end
