@@ -25,3 +25,12 @@ are really full methods that just haven't been named. Used rarely.
 are a way of taking actual named methods and passing them around as arguments to or returns from other methods in your code. Used rarely.
 ##Closure
 is just the umbrella term for all four of those things, which all somehow involve passing around chunks of code.
+
+ex:
+def a_method
+ lambda { return "we just returned from the block" }.call
+ Proc.new { return "we just returned from the block" }.call
+ return "we just returned from the calling method"
+end
+
+puts a_method
