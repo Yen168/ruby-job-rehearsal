@@ -14,7 +14,7 @@ inject(:+)
 
 ##mixin Comparable & <=>
 
-
+#method / block / yield / Proc / lambda
 ##Blocks
 are unnamed little code chunks you can drop into other methods. Used all the time.
 ##Procs
