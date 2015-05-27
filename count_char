@@ -1,0 +1,7 @@
+def lc(str)
+	result = Hash.new(0)
+	str.each_char {|char| result[char]+=1 unless char == " " ;puts char}
+	result
+end
+
+p lc("dfhsgjhsgfaveghsdyjs afgdgafg")
