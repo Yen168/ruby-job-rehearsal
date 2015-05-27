@@ -34,3 +34,34 @@ def a_method
 end
 
 puts a_method
+
+## Flat Scope
+v1 = "This is v1 outside of class C"
+
+C = Class.new do
+  puts v1 # => "This is v1 outside of class C"
+
+  define_method(:call_method) do
+    puts v1 # => "This is v1 outside of class C"
+  end
+end
+
+##Shared Scope
+
+class C
+  shared = "Hello world!"
+
+  define_method(:call_method_a) {
+    puts shared
+  }
+
+  define_method(:call_method_b) {
+    puts shared
+  }
+end
+
+c = C.new
+c.call_method_a # => "Hello world!"
+c.call_method_b # => "Hello world!"
+
+
