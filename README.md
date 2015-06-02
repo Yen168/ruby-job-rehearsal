@@ -64,4 +64,14 @@ c = C.new
 c.call_method_a # => "Hello world!"
 c.call_method_b # => "Hello world!"
 
+##open class
+class << self === self. => Class.self
+
+## module is superclass of class
+Class.methods(false) == Class.methods - Module.methods
+=> ([])
+Class.instance_methods(false) == Class.instance_methods - Module.instance_methods 
+=> ([:allocate, :new, :superclass]
+)
+
 
