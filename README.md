@@ -70,6 +70,7 @@ class << self === self. => Class.self
 ## module is superclass of class
 Class.methods(false) == Class.methods - Module.methods
 => ([])
+
 Class.instance_methods(false) == Class.instance_methods - Module.instance_methods 
 => ([:allocate, :new, :superclass]
 )
