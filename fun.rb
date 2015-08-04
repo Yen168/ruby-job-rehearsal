@@ -26,7 +26,8 @@ puts ->(){
 
 	add1mul3 = con_fun[mul3,add1]
 	add1mul3[2]
-
+	
+	 ->(x,y){->(g){x[y[g]]}}[->(x){->(y){x*y}}[3],->(x){->(y){x+y}}[1]][2]
 	
 
 	}.()
