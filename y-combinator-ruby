@@ -10,3 +10,30 @@ y = ->(f){
 # https://en.wikipedia.org/wiki/Fixed_point_%28mathematics%29
 # https://en.wikipedia.org/wiki/Fixed-point_combinator
 
+puts ->(){
+
+ ->(x,y){->(g){x[y[g]]}}[->(x){->(y){x*y}}[3],->(x){->(y){x+y}}[1]][5]
+
+y = ->(f){
+
+	 ->(x){f[->(v){x[x][v]}]}
+	[->(x){f[->(v){x[x][v]}]}]
+
+}
+
+error = ->n{"NEVER"}
+#refactor
+fact2 = ->fact{->(n){n.zero? ? 1 : n * fact[n-1]}}
+
+f0 = fact2[error]
+f1 = fact2[f0]
+f2 = fact2[f1]
+f3 = fact2[f2]
+f4 = fact2[f3]
+f5 = fact2[f4]
+f5[0]
+
+# only works for 1..5
+
+
+	}.()
