@@ -25,12 +25,12 @@ def result(x)
 
 			c += v
 			return k, sum if rand_fixed <= c
-
+			
 		end
-
 end
 
 def update(ball,bag)
+
 	bag[ball]-=1
 	bag
 end
@@ -46,8 +46,6 @@ def picking(bag)
 		break if (sum-1 == 0)
 
 	end
-
-	
 end
 
 # test
