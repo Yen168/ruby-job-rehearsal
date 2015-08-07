@@ -17,6 +17,7 @@ navs = [7,24,8,15,2,20]
 # Its complexity is O(n) or less.
 
 def seekMax(navs)
+
 	result ||= []
 	result_max = navs.max - navs.min
 	beginer = 0
@@ -36,7 +37,6 @@ def seekMax(navs)
 			#result = result_max, pattern[beginer..ender].first[1],pattern[beginer..ender].last[1]
 			
 			end
-		
 
 		else
 			if pattern[beginer..ender].first[1] == (pattern[beginer..ender].size-1)
